@@ -4,6 +4,20 @@ import { useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
+interface Contact{
+  id: number
+  name: string
+  email: string
+}
+
+export interface NavigatorWithContacts {
+  contacts: {
+    select: (fields: string[], options: { multiple: boolean }) => Promise<Contact[]>
+    create: (contact: Contact) => Promise<void>
+  };
+}
+
 export default function Home() {
   const [loading, setLoading] = useState(false);
 
@@ -12,23 +26,21 @@ export default function Home() {
     try {
       // Método moderno usando Contacts API (suporte limitado)
       if ('contacts' in navigator && 'ContactsManager' in window) {
-        const contacts = await (navigator as any).contacts.select(['name', 'tel', 'email'], { multiple: false });
+        const contacts = await (navigator as NavigatorWithContacts).contacts.select(['name', 'tel', 'email'], { multiple: false });
         if (contacts && contacts[0]) {
           // Lógica para adicionar contato via API
-          await (navigator as any).contacts.create(contacts[0]);
+          await (navigator as NavigatorWithContacts).contacts.create(contacts[0]);
         }
       } else {
         // Fallback para VCard
         const vCardData = `BEGIN:VCARD
 VERSION:3.0
-FN:SALVIO PARTNER LTDA
-TITLE:José Henrique Salvio
-TEL;TYPE=CELL:+55 31 99851-8916
-TEL;TYPE=WORK,VOICE:+55 28 3344-1022
-EMAIL:josehenrique@salviopartner.com
-URL:www.salviopartner.com
-NOTE:Instagram: @salviopartner
-END:VCARD`;
+FN:TALES MACHADO
+TITLE:Thales Machado
+ROLE:Pesidente/President
+TEL;TYPE=CELL:+55 28 99238-0127
+EMAIL:tales.machado@centrorochas.org.br
+END:VCARD`
 
         // Cria um Blob e força a abertura
         const blob = new Blob([vCardData], { type: 'text/vcard' });
@@ -37,7 +49,7 @@ END:VCARD`;
         // Cria link temporário
         const link = document.createElement('a');
         link.href = url;
-        link.download = 'salviopartner.vcf';
+        link.download = 'contato.vcf';
         link.style.display = 'none';
         
         // Aciona o click programaticamente
