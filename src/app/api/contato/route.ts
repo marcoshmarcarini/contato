@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next"
 //import { NextResponse } from "next/server"
 
-export async function handler(req: NextApiRequest, res: NextApiResponse) {
+export async function GET(req: NextApiRequest, res: NextApiResponse) {
     const vCardData = `BEGIN:VCARD
 VERSION:3.0
 FN:TALES MACHADO
