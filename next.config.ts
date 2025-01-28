@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: "Content-Disposition",
-            value: 'attachment; filename="contato-salviopartner.vcf"',
+            value: 'attachment; filename="contato.vcf"',
           },
         ],
       },
