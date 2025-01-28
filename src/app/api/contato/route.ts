@@ -14,7 +14,7 @@ END:VCARD
 
   const headers = new Headers({
     'Content-Type': 'text/vcard',
-    'Content-Disposition': 'attachment; filename="contact.vcf"',
+    'Content-Disposition': 'inline; filename="contact.vcf"',
   })
 
   return new NextResponse(vCard, { headers })
