@@ -4,7 +4,7 @@ export default function Home() {
 
   const saveVcard = async () => {
     try {
-      const response = await fetch('/api/contato')
+      const response = await fetch('/src/api/contato')
       const blob = await response.blob()
 
       //Cria um link temporario para forçar o Download.
