@@ -4,8 +4,8 @@ export async function GET() {
   const vCard = `
 BEGIN:VCARD
 VERSION:3.0
-FN:Thales Machado
-N:Machado;Thales;;;
+FN:Tales Machado
+N:Machado;Tales;;;
 TITLE:Presidente/President
 TEL;TYPE=CELL:+55 28 99885-4700
 EMAIL:tales.machado@centrorochas.org.br
