@@ -13,7 +13,7 @@ export default function Home() {
           href="/api/thales"
           className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
         >
-          Thales Machado
+          Tales Machado
         </a>
         <a
           href="/api/fabio"
