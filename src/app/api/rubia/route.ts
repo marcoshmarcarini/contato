@@ -4,11 +4,11 @@ export async function GET() {
   const vCard = `
 BEGIN:VCARD
 VERSION:3.0
-FN:Thales Machado
-N:Machado;Thales;;;
-TITLE:Presidente/President
-TEL;TYPE=CELL:+55 28 99238-0127
-EMAIL:tales.machado@centrorochas.org.br
+FN:Rubia Tannure 
+N:Rubia;Tannure;;;
+TITLE:Marketing e Relacionamento / Marketing & Relations
+TEL;TYPE=CELL:+55 27 99228-0833
+EMAIL:marketing@centrorochas.org.br
 END:VCARD
   `.trim(); // Remove espaços extras
 

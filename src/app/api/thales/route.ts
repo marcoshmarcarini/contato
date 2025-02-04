@@ -7,7 +7,7 @@ VERSION:3.0
 FN:Thales Machado
 N:Machado;Thales;;;
 TITLE:Presidente/President
-TEL;TYPE=CELL:+55 28 99238-0127
+TEL;TYPE=CELL:+55 28 99885-4700
 EMAIL:tales.machado@centrorochas.org.br
 END:VCARD
   `.trim(); // Remove espaços extras

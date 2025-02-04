@@ -4,11 +4,11 @@ export async function GET() {
   const vCard = `
 BEGIN:VCARD
 VERSION:3.0
-FN:Rubia Tannure
-N:Tannure;Rubia;;;
-TITLE:Marketing e Relacionamento/Marketing & Relations
-TEL;TYPE=CELL:+55 27 99228-0833
-EMAIL:marketing@centrorochas.org.br
+FN:Karina Porto Firme
+N:Porto Firme;Karina;;;
+TITLE:Comunicação e Relações Públicas / Communication & Public Relations
+TEL;TYPE=CELL:+55 27 99705-5705
+EMAIL:comunicacao@centrorochas.org.br
 END:VCARD
   `.trim(); // Remove espaços extras
 
